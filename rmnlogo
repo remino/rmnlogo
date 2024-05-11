@@ -1,0 +1,30 @@
+# vim: ft=zsh:ts=2:sw=2:noet
+# shellcheck disable=all
+
+rmnlogo_main() {
+	color_blue="22;142;230"
+	color_pink="230;0;187"
+	color_purple="153;0;204"
+	bg_blue="\033[48;2;${color_blue}m"
+	bg_pink="\033[48;2;${color_pink}m"
+	bg_purple="\033[48;2;${color_purple}m"
+	fg_blue="\033[38;2;${color_blue}m"
+	fg_pink="\033[38;2;${color_pink}m"
+	fg_purple="\033[38;2;${color_purple}m"
+	reset_bg="\033[49m"
+	reset_all="\033[39m${reset_bg}"
+
+	# shellcheck disable=SC2059
+	printf "
+   ${fg_pink}███▄▄${reset_all}
+   ${fg_pink}▀▀███▄${reset_all}
+   ${fg_pink}  ▄███${reset_all}               ▝▀▀▀
+   ${bg_purple}   ${bg_pink}${fg_purple}▆▄${reset_bg}${reset_all}    █▀▀▀▀▀▀▄  █▀▀▀▀▀▀  ██▄   ▄██  █  ██▄   █   ▄▀▀▀▀▀▄
+   ${fg_purple}▀▀${bg_blue}${bg_purple}${fg_blue}▄▆█${reset_bg}▄${reset_all}   █▄▄▄▄▄▄▀  █▀▀▀▀▀   █ ▀█▄█▀ █  █  █ ▀█▄ █  █       █
+   ${fg_blue}   ███${reset_all}   █    ▀█▄  █▄▄▄▄▄▄  █   ▀   █  █  █   ▀██   ▀▄▄▄▄▄▀
+
+
+"
+}
+
+rmnlogo_main
