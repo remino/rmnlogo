@@ -10,12 +10,11 @@ rmnlogo_main() {
 
 	E_ARGS=16
 
-	SCRIPT_INV="$( basename "$0" )"
-	SCRIPT_PATH="$( readlink -f "$0" )"
-	SCRIPT_NAME="$( basename "$SCRIPT_PATH" )"
+	SCRIPT_INV="$(basename "$0")"
+	SCRIPT_PATH="$(readlink -f "$0")"
+	SCRIPT_NAME="$(basename "$SCRIPT_PATH")"
 
-	while getopts hv OPT
-	do
+	while getopts hv OPT; do
 		case $OPT in
 			h) CMD=help ;;
 			v) CMD=version ;;
@@ -23,12 +22,12 @@ rmnlogo_main() {
 		esac
 	done
 
-	shift "$(( OPTIND - 1 ))"
+	shift "$((OPTIND - 1))"
 
 	[ -z "$CMD" ] && CMD="process"
 
 	case "$CMD" in
-		help|process|version) "rmnlogo_$CMD" "$@" ;;
+		help | process | version) "rmnlogo_$CMD" "$@" ;;
 		*) _invalid_cmd ;;
 	esac
 
@@ -36,7 +35,7 @@ rmnlogo_main() {
 }
 
 rmnlogo_help() {
-cat <<USAGE
+	cat << USAGE
 $SCRIPT_NAME $VERSION
 
 USAGE: $SCRIPT_INV [<options>] <command> [<args>]
