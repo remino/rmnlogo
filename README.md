@@ -1,6 +1,4 @@
-rmnlogo
-=======
+# rmnlogo
 
-![RÉMINO logo](logo.png)
-
-Outputs the RÉMINO logo in ASCII art and ANSI colours.
+Moved to [_rmnlogo_](https://github.com/remino/remutils/tree/main/rmnlogo) in
+[_remutils_](https://github.com/remino/remutils).
